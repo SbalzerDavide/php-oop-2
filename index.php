@@ -2,6 +2,7 @@
     //include class
     include __DIR__ . '/class/Shoes.php';
     include __DIR__ . '/class/Jackets.php';
+    include __DIR__ . '/class/Trousers.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +25,8 @@
                 <h3>
                     <?php 
                     
-                    $first_shoes = new Shoes('nike', 70 , 42);
-                    var_dump($first_shoes);
+                    $first_shoes = new Shoes('Nike', 70 , 42);
+                    // var_dump($first_shoes);
                     echo $first_shoes->name;
                     
                     ?>
@@ -39,6 +40,9 @@
                     </h3>
 
                     <h4>
+                        Prezzo originale:
+                        <?php echo $first_shoes->price ?>€ 
+                        <br>
 
                         Prezzo scontato: 
                         <?php echo $first_shoes->makeDiscount(); ?>€
@@ -70,14 +74,35 @@
                     </h3>
 
                     <h4>
-
+                        Prezzo originale:
+                        <?php echo $first_jacket->price ?>€ 
+                        <br>
                         Prezzo scontato: 
                         <?php echo $first_jacket->makeDiscount(); ?>€
+
                         
                         
                     </h4>
 
-                        <?php var_dump($first_jacket); ?>
+                    <?php 
+                    // var_dump($first_jacket); 
+                    ?>
+                </div>
+                <div class="trousers">
+                    <h2>Trousers</h2>
+                    <h3>
+                        <?php
+                        $first_trousers = new Trousers('Levis', 130);
+                        echo $first_trousers->name;
+                        ?>
+                    </h3>
+                    <h3>
+                        <?php echo $first_trousers->getDiscount();?>
+                    </h3>
+                    <h4>
+                    Prezzo originale:
+                        <?php echo $first_trousers->price ?>€ 
+                    </h4>
                 </div>
             
             </div>

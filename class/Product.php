@@ -17,7 +17,7 @@ public function __construct($name = 'ciao', $price, $availability=7){
 
 //Methods
 public function getDiscount(){
-    echo "Non hai nessuno sconto aplicato su questo prodotto";
+    return "Non hai nessuno sconto applicato su questo prodotto";
 }
 
 
